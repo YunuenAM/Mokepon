@@ -1,0 +1,186 @@
+body{
+    
+    background-color: #BDA2C3;
+}
+
+
+/*Fuentes*/
+
+@font-face {
+    font-family: "TrebuchetMS" ;
+    src: url('fonts/TrebuchetMS.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: "BebasNeue" ;
+    src: url('fonts/BebasNeue.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* Definir la animación de entrada */
+@keyframes slideAndBeat {
+    0% {
+       transform: translateY(-50px);
+    }
+    100% {
+       transform: translateY(0);
+    }
+ }
+
+
+@keyframes heartbeat {
+    0% {
+       transform: scale(1);
+    }
+    50% {
+       transform: scale(1.1);
+    }
+    100% {
+       transform: scale(1);
+    }
+ }
+
+ p {
+   font-family: 'BebasNeue'; 
+ }
+
+
+#header h1{
+    font-family: "BebasNeue";
+    display: flex;
+    width: 712px;
+    height: 127px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin: 0 auto;
+    animation: slideAndBeat 1s ease-in-out, heartbeat 3s infinite; /* Combina ambas animaciones */
+    text-align: center;
+    margin-top: 50px;
+}
+
+h1{
+color: #359DD9;;
+font-style: normal;
+font-weight: 400;
+line-height: 16px;
+}
+
+
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card{
+    width: 200px;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 43px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+}
+
+.card img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 43px;
+}
+
+
+ h1 {
+    font-size: 3em;
+    color: #333;
+     /* Aplicar la animación al título */
+ }
+
+ /* Definir la animación de rotación y enderezamiento */
+@keyframes rotateAndStraighten {
+    0% {
+       transform: rotate(0deg);
+    }
+    50% {
+       transform: rotate(360deg);
+    }
+    100% {
+       transform: rotate(0deg);
+    }
+ }
+
+ /* Aplicar la animación a las tarjetas */
+.card {
+    width: 200px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: rotateAndStraighten 1s; /* Aplicar la animación a las tarjetas */
+ }
+ 
+ .card img {
+    width: 100%;
+    height: auto;
+ }
+
+ /* Definir la animación de brillo */
+@keyframes shine {
+    0% {
+       background-position: -200%;
+       box-shadow: 0 0 10px 5px rgba(255, 255, 0, 0.8);
+    }
+    100% {
+       background-position: 200%;
+       box-shadow: 0 0 20px 10px rgba(255, 255, 0, 0);
+    }
+ }
+
+ /* Estilo inicial para las tarjetas */
+.card {
+    width: 200px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(90deg, rgba(255,255,255,0.5), rgba(255,255,255,0.8));
+    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    margin-bottom: 2.5rem; 
+
+ }
+ 
+ .card img {
+    width: 100%;
+    height: auto;
+ }
+ 
+ /* Aplicar la animación de brillo al pasar el mouse sobre la tarjeta */
+ .card:hover {
+    animation: shine 1.5s infinite linear;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+ }
+
+ button {
+    display: flex;
+    width: 7rem;
+    height: 3rem;
+    padding: 10px;
+    justify-content: center;
+    margin-top: 5rem;
+    align-items: center;
+    margin: auto;
+    border-radius: 43px;
+    border: 1px solid #ccc;
+    background-color: #D9D9D9;
+    width: 347px;
+    height: 50px;
+    flex-shrink: 0;
+    font-family: 'BebasNeue';
+
+}
